@@ -1,0 +1,48 @@
+{
+  "name": "gatsby-starter-default",
+  "private": true,
+  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "version": "0.1.0",
+  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "dependencies": {
+    "@react-three/drei": "^9.32.3",
+    "@react-three/fiber": "^8.8.6",
+    "gatsby": "^4.23.0",
+    "gatsby-plugin-alias-imports": "^1.0.5",
+    "gatsby-plugin-image": "^2.23.0",
+    "gatsby-plugin-manifest": "^4.23.0",
+    "gatsby-plugin-sass": "^5.23.0",
+    "gatsby-plugin-sharp": "^4.23.0",
+    "gatsby-source-filesystem": "^4.23.0",
+    "gatsby-transformer-sharp": "^4.23.0",
+    "prop-types": "^15.8.1",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
+    "sass": "^1.54.9",
+    "three": "^0.144.0",
+    "three-stdlib": "^2.17.0"
+  },
+  "devDependencies": {
+    "prettier": "^2.7.1"
+  },
+  "keywords": [
+    "gatsby"
+  ],
+  "license": "0BSD",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md,css}\"",
+    "start": "gatsby develop",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+  },
+  "bugs": {
+    "url": "https://github.com/gatsbyjs/gatsby/issues"
+  }
+}

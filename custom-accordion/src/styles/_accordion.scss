@@ -1,0 +1,101 @@
+.accordion {
+    $accordion-primary: #444444;
+    $accordion-orange: #fd7a00;
+
+    color: $accordion-primary;
+    width: 100%;
+    position: relative;
+    margin-bottom: 10px;
+
+    &::before {
+        content: "";
+        background-color: $accordion-orange;
+        position: absolute;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        margin-left: -5px;
+        width: 10px;
+        height: 100%;
+    }
+
+    button {
+        outline: none;
+        padding: 20px;
+        border: none;
+        text-align: left;
+        width: 100%;
+        transition: 0.4s;
+        font-size: 21px;
+        font-weight: 500;
+        background-color: #f5eded;
+        font-family: $roboot;
+        color: #000;
+        cursor: pointer;
+
+        &.active,
+        &:hover {
+            background-color: $accordion-orange;
+            color: #fff;
+
+            .arrow::before,
+            .arrow::after {
+                background: #fff;
+            }
+        }
+    }
+
+    .accordion-panel {
+        padding: 0 18px;
+        background-color: white;
+        color: #444444;
+        overflow: hidden;
+        transition: max-height 0.3s ease-in-out;
+    }
+
+    .arrow {
+        position: absolute;
+        top: 30px;
+        right: 30px;
+
+        &:before,
+        &:after {
+            position: relative;
+            content: "";
+            display: block;
+            width: 20px;
+            height: 2px;
+            background: $accordion-orange;
+            transition: 0.3s ease-in-out;
+        }
+
+        &:before {
+            transform: rotate(45deg);
+        }
+
+        &:after {
+            left: 13px;
+            top: -2px;
+            transform: rotate(-45deg);
+        }
+    }
+
+    &.collapsed {
+        .accordion-panel {
+            max-height: 0;
+        }
+    }
+
+    &.uncollapsed {
+        .accordion-panel {
+            max-height: 500px;
+        }
+
+        .arrow::before {
+            transform: rotate(-45deg);
+        }
+
+        .arrow::after {
+            transform: rotate(45deg);
+        }
+    }
+}

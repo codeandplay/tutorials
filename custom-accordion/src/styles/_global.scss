@@ -1,0 +1,57 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Roboto:ital,wght@0,100;0,300;0,700;1,100&display=swap");
+$colorPrimary: rgb(12, 93, 99);
+$colorSecondary: rgb(126, 129, 129);
+
+$roboot: "Roboto", sans-serif;
+$opensans: "Open Sans", sans-serif;
+
+html,
+body {
+    margin: 0px;
+    height: 100%;
+    background-color: rgb(224, 220, 220);
+    font-family: $roboot;
+}
+main {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    display: block;
+    max-width: 1024px;
+    margin: auto;
+
+    section,
+    header {
+        margin: 0;
+        padding: 0;
+        position: relative;
+        margin: auto;
+        background-color: #fff;
+        padding: 20px 100px;
+    }
+
+    section {
+        min-height: 50vh;
+        padding-bottom: 50px;
+    }
+
+    h1 {
+        font-size: 44px;
+        font-weight: 500;
+        color: $colorPrimary;
+        margin: 20px 0;
+    }
+
+    h3 {
+        margin: 0;
+        font-weight: 300;
+        color: $colorSecondary;
+    }
+
+    @media only screen and (max-width: 750px) {
+        section,
+        header {
+            padding: 20px 20px;
+        }
+    }
+}

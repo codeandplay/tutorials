@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+
+body {
+    margin: 0;
+}
+
+h1 {
+    font-family: 'Luckiest Guy', cursive;
+    letter-spacing: 3px;
+    text-shadow: 4px 4px #000;
+}
+
+button {
+    font-family: 'Luckiest Guy', cursive;
+}

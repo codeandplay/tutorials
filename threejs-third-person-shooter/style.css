@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@100;400;900&family=Rubik+Bubbles&display=swap');
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+#blocker {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+#instructions {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    font-size: 14px;
+    cursor: pointer;
+    color: #fff;
+}
+
+.heading {
+    font-family: 'Rubik Bubbles', cursive;
+    font-size: 80px;
+    color: red;
+}
+
+p {
+    font-family: 'Archivo', sans-serif;
+    font-size: 20px;
+    font-weight: 100;
+    letter-spacing: 1px;
+
+}
+
+p strong {
+    color: red;
+}
+
+#player-stats {
+    position: fixed;
+    bottom: 10px;
+    font-family: 'Rubik Bubbles', cursive;
+    font-size: 80px;
+    color: #fff;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+#stopwatch {
+    display: inline-block;
+}
+
+#ball-remaining {
+    position: absolute;
+    display: inline-block;
+    font-size: 20px;
+    margin-top: 41px;
+    width: 220px;
+    left: 230px;
+    color: rgb(155, 155, 177);
+}

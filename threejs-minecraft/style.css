@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@100;400;900&family=Rubik+Bubbles&display=swap');
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+#blocker {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+#instructions {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    font-size: 14px;
+    color: #fff;
+}
+
+.heading {
+    font-family: 'Rubik Bubbles', cursive;
+    font-size: 80px;
+    color: rgb(199, 185, 185);
+    text-shadow: 5px 5px #000000;
+}
+
+p {
+    font-family: 'Archivo', sans-serif;
+    font-size: 20px;
+    font-weight: 100;
+    letter-spacing: 1px;
+
+}
+
+p strong {
+    color: rgb(255, 187, 0);
+}
+
+#texture-container {
+    margin-bottom: 50px;
+}
+
+#texture-container .texture {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    margin-right: 10px;
+
+    cursor: pointer;
+}
+
+#texture-container .texture.active {
+    border: 4px solid red;
+}
+
+#texture-container .texture img {
+    width: 100px;
+    vertical-align: bottom;
+}

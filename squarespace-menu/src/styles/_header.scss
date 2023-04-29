@@ -1,0 +1,197 @@
+.navigation-container {
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    align-items: center;
+    width: 100%;
+    padding: 0px 100px;
+    background-color: #000;
+    z-index: 3;
+
+    .logo {
+        flex-shrink: 0;
+        flex-grow: 1;
+        flex-basis: 0;
+        margin-top: -10px;
+    }
+
+    .nav {
+        flex-grow: 3;
+        flex-shrink: 0;
+        flex-basis: 0;
+        position: relative;
+
+        button {
+            border: none;
+            background: none;
+            color: #fff;
+            margin-right: 40px;
+            font-family: $roboto;
+            font-weight: 500;
+            font-size: 18px;
+            height: 80px;
+            cursor: pointer;
+
+            &.hover {
+                .arrow::before {
+                    transform: rotate(-45deg);
+                }
+                .arrow::after {
+                    transform: rotate(45deg);
+                }
+            }
+        }
+
+        .arrow {
+            float: right;
+            margin-top: 10px;
+            margin-left: 5px;
+
+            &:before,
+            &:after {
+                position: relative;
+                content: "";
+                display: block;
+                width: 10px;
+                height: 1px;
+                background: #fff;
+                transition: 0.3s ease-in-out;
+            }
+
+            &:before {
+                transform: rotate(45deg);
+            }
+
+            &:after {
+                left: 7px;
+                top: -1px;
+                transform: rotate(-45deg);
+            }
+        }
+    }
+
+    .sub-menu-resources {
+        position: absolute;
+        top: 50px;
+        left: 0;
+        height: 0;
+        width: 100%;
+        background-color: #000;
+        overflow: hidden;
+        z-index: 4;
+        transition: 0.2s ease-in-out;
+
+        &.is-open {
+            height: 580px;
+
+            .sub-menu-container {
+                opacity: 1;
+                margin-top: 0px;
+            }
+        }
+
+        .sub-menu-container {
+            display: flex;
+            padding: 100px 40px;
+            margin: auto;
+            max-width: 1480px;
+            opacity: 0;
+            transition: 0.5s ease-in-out;
+            margin-top: 30px;
+            margin-left: calc(100vw * 0.12);
+
+            .sub-menu-col {
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                min-width: calc(100vw * 0.35);
+
+                &:last-child {
+                    min-width: calc(100vw * 0.35);
+                }
+            }
+        }
+
+        .image-container {
+            position: relative;
+            display: block;
+            top: 0px;
+            right: 0px;
+
+            img {
+                position: absolute;
+                top: 0;
+                left: -10px;
+                right: 0;
+                bottom: 0;
+                width: 100%;
+                height: auto;
+                opacity: 0;
+                transition: 0.5s ease-in-out;
+
+                &.show-image {
+                    opacity: 1;
+                    left: 0;
+                }
+            }
+        }
+
+        a {
+            display: block;
+            position: relative;
+            color: #fff;
+            padding-bottom: 6px;
+            text-decoration: none;
+            overflow: hidden;
+            font-family: $roboto;
+            font-size: 28px;
+            font-weight: 700;
+            width: 100%;
+            color: rgb(110, 108, 108);
+
+            &::after {
+                content: "";
+                position: absolute;
+                display: block;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 1px;
+                background-color: #fff;
+                opacity: 1;
+                transform: translate3d(-100%, 0, 0);
+                transition: opacity 300ms, transform 300ms;
+            }
+
+            aside {
+                display: inline-block;
+                transition: 0.2s;
+                transform-origin: top left;
+                transform: scaleX(0);
+            }
+
+            &:hover {
+                color: #fff;
+
+                aside {
+                    transform: scaleX(1);
+                }
+
+                &::after {
+                    transform: translate3d(0, 0, 0);
+                }
+            }
+        }
+    }
+}
+
+//mobile - hide this menu
+@media only screen and (max-width: 750px) {
+    .navigation-container {
+        padding: 20px 20px;
+        .nav {
+            display: none;
+        }
+    }
+}

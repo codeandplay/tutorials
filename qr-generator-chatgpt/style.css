@@ -1,0 +1,43 @@
+body {
+    background-color: blueviolet;
+    display: flex;
+}
+
+#qr-container {
+    max-width: 400px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0px 15px 15px rgba(0, 0, 0, 0.5);
+    margin: auto;
+}
+
+input {
+    width: 100%;
+    font-size: 20px;
+    border: 2px solid blueviolet;
+    padding: 5px;
+    margin-bottom: 5px;
+}
+
+button {
+    padding: 20px;
+    background-color: blueviolet;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    width: 100%;
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgb(57, 7, 104);
+}
