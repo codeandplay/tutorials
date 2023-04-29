@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300&display=swap');
+
+
+body {
+    background-color: #777777;
+    font-family: 'Rajdhani', sans-seri;
+    color: #fff;
+}
