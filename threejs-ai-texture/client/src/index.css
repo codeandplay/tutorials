@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=Questrial&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+body {
+    background: rgb(133, 40, 190);
+    background: linear-gradient(45deg, rgb(201, 185, 211) 0%, rgb(255, 255, 255) 47%, rgb(231, 195, 228) 100%);
+}
+
+h1 {
+    font-family: 'Lilita One', cursive;
+}
+
+h3 {
+    font-family: 'Questrial', sans-serif;
+}
+
+h1,
+h3 {
+    background: #fd00b1;
+    background: linear-gradient(to right, rgb(133, 40, 190) 0%, #fd00b1 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
